@@ -1,0 +1,224 @@
+@import "config";
+@import "utilities";
+@import "buttons";
+
+h1,
+h2,
+h3,
+h4,
+a {
+    color: $primary-white;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    width: 100%;
+    height: 720px;
+    min-height: 70vh;
+    position: relative;
+    background: url("https://i.ibb.co/vXqDmnh/background.jpg") no-repeat center center/cover;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba($color: $secondary-color, $alpha: 0.6);
+        box-shadow: 120px 100px 250px $secondary-color,
+            inset -120px -100px 250px $secondary-color;
+    }
+
+    &-top {
+        position: relative;
+        height: 5.625rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+
+        img {
+            width: 8rem;
+        }
+    }
+
+    &-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+
+        h1 {
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 1.1;
+            max-width: 43rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.25;
+        }
+
+        .join {
+            display: flex;
+            width: 90%;
+
+            input {
+                width: 100%;
+                border: none;
+                padding: 0.8rem 1rem;
+                border-radius: 3px 0 0 3px;
+            }
+        }
+    }
+}
+
+.tabs {
+    background: $dark-color;
+    border-bottom: 3px solid #3d3d3d;
+
+    .contain {
+        display: grid;
+        grid-gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: $primary-grey;
+        grid-template-columns: repeat(3, 1fr);
+
+        &>div {
+            padding: 1.5rem 0;
+            transition: .3s;
+        }
+
+        &>div:hover {
+            color: $primary-white;
+            cursor: pointer;
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+    }
+}
+
+.tab-border {
+    border-bottom: 4px solid $primary-color;
+}
+
+.tab-content {
+    background: $secondary-color;
+}
+
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+    display: none;
+}
+
+.show-tab-content {
+    display: block !important;
+}
+
+#tab-1-content .tab-1-content-inner {
+    display: grid;
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#tab-2-content {
+    .tab-2-content-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tab-2-content-bottom {
+        display: grid;
+        grid-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+#tab-3-content {
+    .flexme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead th {
+        padding: .8rem;
+        text-transform: uppercase;
+    }
+
+    tbody {
+        tr td {
+            color: $primary-grey;
+            text-align: center;
+            padding: .8rem 1.2rem;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+
+        tr:nth-child(odd) {
+            background: #222;
+        }
+    }
+}
+
+.footer {
+    max-width: 75%;
+    overflow: auto;
+
+    .footer-cols {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+
+        li {
+            line-height: 1.9;
+        }
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    a {
+        color: $primary-grey;
+        font-size: .8rem;
+    }
+}
+
+@import "mobile";

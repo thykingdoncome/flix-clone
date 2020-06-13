@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+$primary-color: #e50914;
+$secondary-color: #000;
+$primary-grey: #999;
+$primary-white: #fff;
+$dark-color: #141414;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: anitialised;
+    background: $secondary-color;
+    color: $primary-white;
+    min-height: 100vh;
+}
+
+.contain {
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
